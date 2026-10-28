@@ -1,6 +1,6 @@
 # L.D Construction: site notes for Claude
 
-Static one-page site for L.D Construction, built by getPresented. Hosted on GitHub Pages. This repo is **public**: never put private data (WhatsApp number on file, billing, plan, personal details) in it. Those live in the getPresented private client list.
+Static multi-page site for L.D Construction, built by getPresented. Hosted on GitHub Pages. This repo is **public**: never put private data (WhatsApp number on file, billing, plan, personal details) in it. Those live in the getPresented private client list.
 
 ## The business
 - **Name:** L.D Construction (written "L.D", with the dot)
@@ -12,15 +12,22 @@ Static one-page site for L.D Construction, built by getPresented. Hosted on GitH
 
 ## Files
 ```
-index.html            Whole site: CSS and JS are inline on purpose (self-contained page)
-404.html              Minimal not-found page
+index.html            Home: headline, hero photo, one teaser photo, services summary, quote band
+work/index.html       Our work: the full gallery (jobs, "More jobs", lightbox)
+services/index.html   What we do: the 12 services, linking to jobs on /work/
+quote/index.html      Get a quote: call / WhatsApp, and what to send
+404.html              Minimal not-found page (styles inline)
+assets/site.css       ONE shared stylesheet for every page (change design here, once)
+assets/lightbox.js    Lightbox, used on /work/ only. Reads window.LD_DATA from that page
 assets/images/<project>/<n>.webp       Full photos (739-1000px wide, 3:4)
 assets/images/<project>/<n>-sm.webp    480px thumbnails used in the grid
 assets/fonts/         Self-hosted Bodoni Moda + Montserrat (subset woff2). No Google Fonts calls.
 assets/logo-mark.png  The client's LD monogram, black with transparent background (recoloured in CSS with a mask)
 assets/og-image.jpg   1200x630 share image
-robots.txt, sitemap.xml, _config.yml, EDITS.md, CLAUDE.md, README.md
+CNAME, robots.txt, sitemap.xml, _config.yml, EDITS.md, CLAUDE.md, README.md
 ```
+All asset links are root-absolute (`/assets/...`) so they work from any page.
+The header, footer and mobile call bar are repeated in each page: when you change one (new nav link, footer text), change **every** page including `404.html` if relevant.
 `_config.yml` stops CLAUDE.md, README.md, EDITS.md and docs/ being published.
 
 ## Design (keep it consistent)
@@ -37,11 +44,15 @@ robots.txt, sitemap.xml, _config.yml, EDITS.md, CLAUDE.md, README.md
 - Six services on the list have no photos yet (bathrooms, windows, doors, glazing, PVC, gutters). They appear in the list without a "See photos" link; add one when photos arrive.
 
 ## How to change things
-**Edit text, phone, links:** edit `index.html` directly. The phone number appears in several places (header, hero, contact, call bar, JSON-LD, `404.html`, OG image). Search for `7311` and update every one.
+**Edit text, phone, links:** edit the page directly. The phone number appears on every page (nav, hero, quote band, call bar, WhatsApp link), in the home page JSON-LD, in `404.html` and baked into `assets/og-image.jpg`. Search the repo for `7311` and update every one.
 
-**Add photos to an existing project:** (1) add `n.webp` (max 1000px wide, 3:4, quality ~80) and `n-sm.webp` (480px wide) to `assets/images/<project>/`; (2) add an entry to the project's `photos` array in the `DATA` object in the `<script>` at the bottom of `index.html`; order in the array is the lightbox order; (3) update the "N photos" / "See all N photos" text.
+**Add photos to an existing project:** (1) add `n.webp` (max 1000px wide, 3:4, quality ~80) and `n-sm.webp` (480px wide) to `assets/images/<project>/`; (2) add an entry to the project's `photos` array in `window.LD_DATA` in the `<script>` at the bottom of `work/index.html`; order in the array is the lightbox order; (3) update the "N photos" / "See all N photos" text.
 
-**Add a new project:** copy an existing `<article class="job">` (featured) or `<li>` in `ul.cards` (compact), give it a unique `id`, point its buttons at a new key via `data-project` / `data-i`, and add that key to `DATA`.
+**Add a new project:** in `work/index.html`, copy an existing `<article class="job">` (featured) or `<li>` in `ul.cards` (compact), give it a unique `id`, point its buttons at a new key via `data-project` / `data-i`, and add that key to `LD_DATA`. If it matches a service, update that service's "See photos" link in `services/index.html`.
+
+**Keep the home page short.** It deliberately has just two photos and one route to a quote. Do not move the gallery or long lists back onto it.
+
+**New page:** copy `quote/index.html`, change title/description/canonical/og:url and the nav `aria-current`, add it to the nav and footer on every page and to `sitemap.xml`.
 
 **Phone photos:** client screenshots often arrive with black bars top and bottom. Crop to the photo before adding.
 
@@ -56,6 +67,7 @@ robots.txt, sitemap.xml, _config.yml, EDITS.md, CLAUDE.md, README.md
 - [ ] Buy the domain (Namecheap), then DNS: A records `@` to 185.199.108.153 / .109.153 / .110.153 / .111.153, CNAME `www` to `glancyg17.github.io`; enable Pages custom domain + HTTPS
 - [ ] Area covered, email address, owner name (add to contact + JSON-LD `areaServed`)
 - [ ] Confirm 07311 822986 is on WhatsApp
+- [ ] Quote page has no form (no email address yet). If an email is supplied, consider adding a FormSubmit form
 - [ ] Confirm project captions/descriptions with the client
 - [ ] Photos for bathrooms, windows, doors, glazing, PVC, gutters; finished "after" shots for jobs shown mid-build
 - [ ] Google Business Profile; then real Google reviews for the site
