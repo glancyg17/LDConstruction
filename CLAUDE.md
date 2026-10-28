@@ -34,6 +34,7 @@ The header, footer and mobile call bar are repeated in each page: when you chang
 - **Idea:** let the work do the talking. Dark, plain page; real site photos; one memorable moment (the spirit level in the hero that settles on load).
 - **Palette (dark, from the work itself):** bg `#1C2124` (roof slate) · panel `#272D31` (photo wells, contact band) · head `#F4F5F2` (plasterboard white: headings, buttons, logo) · body `#D6DBD7` · mute `#A6AFAA` · line `#3C454A` · level blue `#1B8FCC` (the blue spirit level in the photos; only for the level graphic and focus rings) and `#6CC1F2` for blue text/links. All text passes WCAG AAA (7:1) on bg and panel. Client asked for dark background with light text (28 Oct 2026): do not return to a white page.
 - **Type:** Bodoni Moda (headings, echoes the monogram) with `font-variation-settings:"opsz" 30` so hairlines stay visible at large sizes. Montserrat for everything else (it is the typeface on their logo sheet).
+- **The level graphic** (home hero) is a precision instrument, not a toy: hairline scale with fading ticks, glass vial, pale bubble that settles once on load, centre marks turning blue when it locks level. Pure CSS in `assets/site.css`; static and already locked under `prefers-reduced-motion`. Keep it small, monochrome and quiet; do not return to a coloured plastic bar.
 - **No** all-caps labels, eyebrow text, stock icons, gradients (except the level graphic), testimonial cards or scroll animations.
 - Sentence case, plain British English, no hype.
 

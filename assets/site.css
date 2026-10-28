@@ -91,22 +91,27 @@ p{margin:0}
 .hero__photo figcaption{margin-top:.6rem;font-size:.9rem;color:var(--mute)}
 .hero__photo a{text-decoration:none}
 
-/* the one moment: a spirit level that settles */
-.level{position:relative;height:3rem;margin-top:2.6rem;max-width:34rem;border-radius:6px;background:linear-gradient(#2BA6EA,var(--level) 55%,#1680BA);box-shadow:inset 0 2px 0 rgba(255,255,255,.4),inset 0 -2px 0 rgba(0,0,0,.2);display:grid;place-items:center}
-.level::before,.level::after{content:"";position:absolute;top:50%;width:.7rem;height:.7rem;margin-top:-.35rem;border-radius:50%;background:radial-gradient(circle at 35% 35%,#d9eefb,#0f6a9d);box-shadow:inset 0 0 0 1px rgba(0,0,0,.25)}
-.level::before{left:1rem}.level::after{right:1rem}
-.vial{position:relative;width:min(11.5rem,46%);height:1.65rem;border-radius:1rem;background:linear-gradient(#f6f9d8,#dfe97a);border:2px solid rgba(255,255,255,.75);box-shadow:inset 0 2px 3px rgba(0,0,0,.25);overflow:hidden}
-.vial::before,.vial::after{content:"";position:absolute;top:0;bottom:0;width:2px;background:rgba(14,106,160,.7)}
-.vial::before{left:calc(50% - 2rem)}.vial::after{left:calc(50% + 2rem)}
-.bubble{position:absolute;top:.2rem;left:50%;width:3.1rem;height:1rem;margin-left:-1.55rem;border-radius:1rem;background:rgba(255,255,255,.85);border:1px solid rgba(0,0,0,.18);animation:settle 3.2s cubic-bezier(.3,.7,.4,1) .35s both}
+/* the one moment: a precision level that settles. Hairline scale, glass vial, pale bubble */
+.level{position:relative;height:2.6rem;margin-top:2.6rem;max-width:34rem;display:grid;place-items:center}
+.level::before{content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(var(--line),var(--line)) center/100% 1px no-repeat,
+    repeating-linear-gradient(90deg,var(--line) 0 1px,transparent 1px 1.1rem) center/100% .55rem no-repeat;
+  -webkit-mask:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);
+  mask:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent)}
+.vial{position:relative;width:min(10rem,46%);height:1.7rem;border-radius:1rem;background:var(--bg);border:1px solid rgba(244,245,242,.5);box-shadow:0 0 0 .45rem var(--bg),inset 0 1px 0 rgba(244,245,242,.18);overflow:hidden}
+.vial::before,.vial::after{content:"";position:absolute;top:.3rem;bottom:.3rem;width:1px;background:rgba(244,245,242,.35);animation:lock .5s ease 3.1s forwards}
+.vial::before{left:calc(50% - 1.7rem)}.vial::after{left:calc(50% + 1.7rem)}
+.bubble{position:absolute;top:50%;left:50%;width:2.4rem;height:.6rem;margin:-.3rem 0 0 -1.2rem;border-radius:1rem;background:linear-gradient(var(--head),#bfc6c1);box-shadow:0 0 .9rem rgba(244,245,242,.28);animation:settle 3.2s cubic-bezier(.3,.7,.4,1) .35s both}
 @keyframes settle{
-  0%{transform:translateX(-4rem)}
-  28%{transform:translateX(2.6rem)}
-  50%{transform:translateX(-1.1rem)}
-  68%{transform:translateX(.55rem)}
-  84%{transform:translateX(-.2rem)}
+  0%{transform:translateX(-3.3rem)}
+  28%{transform:translateX(2.3rem)}
+  50%{transform:translateX(-1rem)}
+  68%{transform:translateX(.5rem)}
+  84%{transform:translateX(-.18rem)}
   100%{transform:translateX(0)}
 }
+@keyframes lock{to{background:var(--level);box-shadow:0 0 .6rem rgba(27,143,204,.7)}}
 
 /* work */
 .section{padding-block:clamp(3.5rem,8vw,7rem)}
@@ -219,4 +224,5 @@ dialog.lb::backdrop{background:rgba(20,23,25,.985)}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .bubble{animation:none}
+  .vial::before,.vial::after{animation:none;background:var(--level)}
 }
