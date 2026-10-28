@@ -1,0 +1,6 @@
+# Keep working notes out of the published site (the repo itself is public on GitHub)
+exclude:
+  - CLAUDE.md
+  - README.md
+  - EDITS.md
+  - docs

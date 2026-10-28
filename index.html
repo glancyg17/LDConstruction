@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>L.D Construction | Joinery and construction work</title>
+<meta name="description" content="L.D Construction: joinery and construction work including loft conversions, roofing, oak work, fencing, flooring and excavation. Call 07311 822986.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ldconstruction.trade/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="L.D Construction | Joinery and construction work">
+<meta property="og:description" content="Loft conversions, roofing, oak work, fencing, flooring and excavation. Call 07311 822986.">
+<meta property="og:url" content="https://ldconstruction.trade/">
+<meta property="og:image" content="https://ldconstruction.trade/assets/og-image.jpg">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F2F3F0">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/bodoni-moda.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/montserrat.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/images/timber-roof/3.webp" as="image">
+<!-- Cloudflare Web Analytics beacon goes here once the site is added in Cloudflare (cookie-free, no consent banner needed) -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"GeneralContractor","name":"L.D Construction","description":"All joinery and construction work: renovations, conversions, bathrooms, kitchens, windows, doors, glazing, roofing, PVC, gutters, gardens and excavation.","telephone":"+447311822986","image":"https://ldconstruction.trade/assets/og-image.jpg","url":"https://ldconstruction.trade/"}
+</script>
+<style>
+@font-face{font-family:"Bodoni Moda";src:url(assets/fonts/bodoni-moda.woff2) format("woff2");font-weight:400 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Montserrat";src:url(assets/fonts/montserrat.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+
+:root{
+  /* palette, taken from the work itself */
+  --chalk:#F2F3F0;      /* plasterboard */
+  --ink:#000;           /* the logo */
+  --slate:#2F3438;      /* roof slate: body text and the dark band */
+  --mute:#5A6267;
+  --line:#CBD0CC;
+  --level:#1B8FCC;      /* the blue spirit level that turns up in the photos */
+  --level-d:#0E6AA0;
+  --display:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --text:"Montserrat",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --wrap:1180px;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:1rem;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--chalk);color:var(--slate);font:400 1.0625rem/1.65 var(--text);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{margin:0;color:var(--ink);font-family:var(--display);font-weight:700;letter-spacing:-.015em;text-wrap:balance;font-optical-sizing:none;font-variation-settings:"opsz" 30}
+p{margin:0}
+:focus-visible{outline:3px solid var(--level);outline-offset:3px}
+.wrap{width:min(100% - 2.5rem,var(--wrap));margin-inline:auto}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--chalk);padding:.75rem 1rem;z-index:100}
+.skip:focus{left:0}
+
+/* logo mark: the client's own LD monogram, recoloured with a mask */
+.mark{display:inline-block;aspect-ratio:1;background:currentColor;-webkit-mask:url(assets/logo-mark.png) center/contain no-repeat;mask:url(assets/logo-mark.png) center/contain no-repeat}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:3.25rem;padding:.8rem 1.6rem;border:2px solid var(--ink);border-radius:2px;font:600 1rem/1.2 var(--text);text-decoration:none;cursor:pointer;background:transparent;color:var(--ink)}
+.btn--solid{background:var(--ink);color:var(--chalk)}
+.btn--solid:hover{background:var(--slate);border-color:var(--slate)}
+.btn--line:hover{background:var(--ink);color:var(--chalk)}
+.btn svg{width:1.15em;height:1.15em;flex:none}
+
+/* header */
+.top{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:1.1rem}
+.brand{display:inline-flex;align-items:center;gap:.8rem;text-decoration:none;color:var(--ink);font:600 1rem/1 var(--text)}
+.brand .mark{width:2.6rem}
+.top__call{font:600 1rem var(--text);text-decoration:none;color:var(--ink);border-bottom:2px solid var(--ink);padding-bottom:.15rem;display:none}
+.top__call:hover{border-color:var(--level)}
+
+/* hero */
+.hero{display:grid;gap:2.5rem;padding-block:clamp(1.5rem,4vw,3rem) clamp(2rem,4vw,3rem);align-items:center}
+.hero h1{font-size:clamp(3rem,9.2vw,6.4rem);line-height:1.03;letter-spacing:-.02em}
+.lede{margin-top:1.6rem;max-width:34rem;font-size:1.15rem;color:var(--slate)}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.hero__photo{margin:0}
+.hero__photo img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.hero__photo figcaption{margin-top:.6rem;font-size:.9rem;color:var(--mute)}
+.hero__photo a{text-decoration:none}
+
+/* the one moment: a spirit level that settles */
+.level{position:relative;height:3rem;margin-top:2.6rem;max-width:34rem;border-radius:6px;background:linear-gradient(#2BA6EA,var(--level) 55%,#1680BA);box-shadow:inset 0 2px 0 rgba(255,255,255,.4),inset 0 -2px 0 rgba(0,0,0,.2);display:grid;place-items:center}
+.level::before,.level::after{content:"";position:absolute;top:50%;width:.7rem;height:.7rem;margin-top:-.35rem;border-radius:50%;background:radial-gradient(circle at 35% 35%,#d9eefb,#0f6a9d);box-shadow:inset 0 0 0 1px rgba(0,0,0,.25)}
+.level::before{left:1rem}.level::after{right:1rem}
+.vial{position:relative;width:min(11.5rem,46%);height:1.65rem;border-radius:1rem;background:linear-gradient(#f6f9d8,#dfe97a);border:2px solid rgba(255,255,255,.75);box-shadow:inset 0 2px 3px rgba(0,0,0,.25);overflow:hidden}
+.vial::before,.vial::after{content:"";position:absolute;top:0;bottom:0;width:2px;background:rgba(14,106,160,.7)}
+.vial::before{left:calc(50% - 2rem)}.vial::after{left:calc(50% + 2rem)}
+.bubble{position:absolute;top:.2rem;left:50%;width:3.1rem;height:1rem;margin-left:-1.55rem;border-radius:1rem;background:rgba(255,255,255,.85);border:1px solid rgba(0,0,0,.18);animation:settle 3.2s cubic-bezier(.3,.7,.4,1) .35s both}
+@keyframes settle{
+  0%{transform:translateX(-4rem)}
+  28%{transform:translateX(2.6rem)}
+  50%{transform:translateX(-1.1rem)}
+  68%{transform:translateX(.55rem)}
+  84%{transform:translateX(-.2rem)}
+  100%{transform:translateX(0)}
+}
+
+/* work */
+.section{padding-block:clamp(3.5rem,8vw,7rem)}
+.section__head{max-width:40rem;margin-bottom:clamp(1.5rem,4vw,3rem)}
+.section__head h2{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.02}
+.section__head p{margin-top:1rem;color:var(--mute)}
+.job{display:grid;gap:1.4rem;padding-block:2.6rem;border-top:1px solid var(--line)}
+.job h3{font-size:clamp(1.7rem,3.2vw,2.3rem);line-height:1.08}
+.job__text p{margin-top:.8rem;max-width:30rem}
+.more{margin-top:1.2rem;padding:0 0 .15rem;border:0;border-bottom:2px solid var(--ink);background:none;font:600 .95rem var(--text);color:var(--ink);cursor:pointer}
+.more:hover{border-color:var(--level)}
+.tile,.card{display:block;width:100%;padding:0;border:0;background:#d5d9d4;cursor:zoom-in;overflow:hidden}
+.tile img,.card img{width:100%;height:100%;aspect-ratio:3/4;object-fit:cover}
+.job__photos{display:grid;gap:.7rem;grid-template-columns:repeat(2,1fr)}
+.job__photos--lead .tile--big{grid-column:1/-1}
+.job__photos--trio{grid-template-columns:repeat(2,1fr)}
+.job__photos--trio .tile:first-child{grid-column:1/-1}
+.job__photos--quad{grid-template-columns:repeat(2,1fr)}
+
+/* loft stages: a real sequence, so it is numbered */
+.stages{list-style:none;margin:0;padding:0;display:grid;grid-auto-flow:column;grid-auto-columns:72%;gap:.8rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.6rem}
+.stages li{scroll-snap-align:start;display:flex;flex-direction:column;gap:.35rem}
+.stage__n{font:700 .95rem var(--text);color:var(--level-d)}
+.stage__name{font:700 1.05rem/1.2 var(--text);color:var(--ink);margin-top:.25rem}
+.stage__note{font-size:.92rem;color:var(--mute);line-height:1.4}
+
+/* more jobs */
+.cards{list-style:none;margin:0;padding:0;display:grid;gap:2rem .8rem;grid-template-columns:repeat(2,1fr)}
+.cards h3{font:700 1.02rem/1.25 var(--text);letter-spacing:0;margin-top:.8rem}
+.cards p{font-size:.92rem;line-height:1.5;margin-top:.3rem;color:var(--slate)}
+.count{display:block;margin-top:.4rem;font-size:.85rem;color:var(--mute)}
+.card:hover img{filter:brightness(1.06)}
+
+/* services */
+.services{display:grid;gap:2rem}
+.svc{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.svc li{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--line);font:600 1.15rem var(--text);color:var(--ink)}
+.svc a{font:500 .92rem var(--text);color:var(--level-d);text-underline-offset:.2em}
+.note{margin-top:1.4rem;max-width:34rem;color:var(--mute);font-size:.98rem}
+
+/* contact: the only dark band */
+.contact{background:var(--slate);color:var(--chalk);padding-block:clamp(3.5rem,8vw,7rem)}
+.contact h2{color:var(--chalk);font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.02}
+.contact p{margin-top:1rem;max-width:32rem;color:#d7dbd6}
+.phone{display:block;margin-top:1.8rem;font:700 clamp(2.5rem,10vw,6rem)/1.05 var(--display);font-optical-sizing:none;font-variation-settings:"opsz" 30;letter-spacing:-.02em;color:var(--chalk);text-decoration:none}
+.phone:hover{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:.12em;text-decoration-color:var(--level)}
+.contact .cta{margin-top:2rem}
+.contact .btn{border-color:var(--chalk);color:var(--chalk)}
+.contact .btn--solid{background:var(--chalk);color:var(--ink)}
+.contact .btn--solid:hover{background:#fff;border-color:#fff}
+.contact .btn--line:hover{background:var(--chalk);color:var(--ink)}
+
+.foot{background:var(--chalk);padding-block:2rem 6.5rem;font-size:.9rem;color:var(--mute)}
+.foot .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem}
+.foot .brand{font-size:.95rem}
+.foot .brand .mark{width:2rem}
+
+/* mobile call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1fr 1fr;gap:.6rem;padding:.7rem .9rem calc(.7rem + env(safe-area-inset-bottom,0px));background:var(--chalk);border-top:1px solid var(--line)}
+.callbar .btn{min-height:3rem;padding:.6rem 1rem}
+
+/* lightbox */
+dialog.lb{border:0;padding:0;background:transparent;max-width:none;max-height:none;width:100%;height:100%;color:var(--chalk)}
+dialog.lb::backdrop{background:rgba(20,23,25,.985)}
+.lb__in{position:relative;height:100%;display:grid;grid-template-rows:1fr auto;padding:3.5rem .8rem 1rem}
+.lb__stage{min-height:0;display:grid;place-items:center}
+.lb__stage img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.lb__bar{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;padding-top:.8rem;max-width:60rem;margin-inline:auto;width:100%}
+.lb__cap{font-size:.98rem;line-height:1.45}
+.lb__cap b{display:block;font-family:var(--display);font-size:1.25rem;margin-bottom:.15rem}
+.lb__count{white-space:nowrap;font-size:.9rem;color:#c3c9c4}
+.lb button{font:600 1rem var(--text);color:var(--chalk);background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);border-radius:2px;cursor:pointer;min-width:3rem;min-height:3rem}
+.lb button:hover{background:rgba(255,255,255,.24)}
+.lb__x{position:absolute;top:.7rem;right:.8rem}
+.lb__prev,.lb__next{position:absolute;top:50%;margin-top:-1.5rem;font-size:1.4rem!important}
+.lb__prev{left:.6rem}.lb__next{right:.6rem}
+
+@media (min-width:700px){
+  .top__call{display:inline-block}
+  .callbar{display:none}
+  .foot{padding-bottom:2rem}
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .stages{grid-auto-columns:34%}
+}
+@media (min-width:900px){
+  .hero{grid-template-columns:7fr 5fr;gap:4rem}
+  .job{grid-template-columns:repeat(12,1fr);gap:1.5rem 2.5rem;padding-block:3.4rem;align-items:start}
+  .job__text{grid-column:1/5;position:sticky;top:1.5rem}
+  .job__photos{grid-column:5/13;grid-template-columns:repeat(3,1fr)}
+  .job--flip .job__text{grid-column:9/13;grid-row:1}
+  .job--flip .job__photos{grid-column:1/9;grid-row:1}
+  .job__photos--lead{grid-template-columns:repeat(3,1fr)}
+  .job__photos--lead .tile--big{grid-column:1/3;grid-row:span 2}
+  .job__photos--trio .tile:first-child{grid-column:auto}
+  .job__photos--quad{grid-template-columns:repeat(4,1fr)}
+  .job--wide .job__text{grid-column:1/-1;position:static;max-width:40rem}
+  .job--wide .stages{grid-column:1/-1;grid-auto-columns:minmax(0,1fr);overflow:visible}
+  .cards{grid-template-columns:repeat(4,1fr)}
+  .services{grid-template-columns:5fr 7fr;gap:4rem}
+  .lb__in{padding:3.5rem 5rem 1.2rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .bubble{animation:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#work">Skip to the work</a>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="./"><span class="mark" role="img" aria-label="L.D monogram"></span><span>L.D Construction</span></a>
+    <a class="top__call" href="tel:+447311822986">Call 07311 822986</a>
+  </header>
+
+  <main>
+  <section class="hero" aria-labelledby="h1">
+    <div class="hero__copy">
+      <h1 id="h1">All joinery and construction work.</h1>
+      <p class="lede">Loft conversions, roofs, oak work, fencing, floors and groundworks. Here is what we have built recently.</p>
+      <div class="cta">
+        <a class="btn btn--solid" href="tel:+447311822986">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          Call 07311 822986</a>
+        <a class="btn btn--line" href="https://wa.me/447311822986?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20some%20work." rel="noopener">Message on WhatsApp</a>
+      </div>
+      <div class="level" aria-hidden="true"><div class="vial"><span class="bubble"></span></div></div>
+    </div>
+    <figure class="hero__photo">
+      <a href="#timber-roof"><img src="assets/images/timber-roof/3.webp" alt="Hand-cut timber roof seen from inside, rafters and ties meeting at the ridge" width="739" height="988" fetchpriority="high"></a>
+      <figcaption>Hand-cut timber roof, cut and fitted on site.</figcaption>
+    </figure>
+  </section>
+
+  <section class="section" id="work" aria-labelledby="work-h">
+    <div class="section__head">
+      <h2 id="work-h">Recent work</h2>
+      <p>Real jobs, photographed on site. Tap any photo to look closer.</p>
+    </div>
+    
+<article class="job job--wide" id="loft-conversion">
+  <div class="job__text">
+    <h3>Loft conversion</h3>
+    <p>An empty roof space turned into a finished room. Steel and structure first, then insulation, flooring, plastering and the final fit-out.</p>
+    <button class="more" type="button" data-project="loft-conversion" data-i="0">See all 10 photos</button>
+  </div>
+  <ol class="stages"><li><span class="stage__n">Stage 1</span><button class="tile " type="button" data-project="loft-conversion" data-i="0" aria-label="Open photo: Steel in place and the roof structure opened up"><img src="assets/images/loft-conversion/1-sm.webp" srcset="assets/images/loft-conversion/1-sm.webp 480w, assets/images/loft-conversion/1.webp 739w" alt="Steel in place and the roof structure opened up" width="480" height="640" loading="lazy" decoding="async" sizes="(min-width:900px) 22vw, 46vw"></button><span class="stage__name">Structure</span><span class="stage__note">Steel in, roof space opened up</span></li><li><span class="stage__n">Stage 2</span><button class="tile " type="button" data-project="loft-conversion" data-i="2" aria-label="Open photo: Spray-foam insulation, pipework and boiler fitted"><img src="assets/images/loft-conversion/6-sm.webp" srcset="assets/images/loft-conversion/6-sm.webp 480w, assets/images/loft-conversion/6.webp 739w" alt="Spray-foam insulation, pipework and boiler fitted" width="480" height="640" loading="lazy" decoding="async" sizes="(min-width:900px) 22vw, 46vw"></button><span class="stage__name">Insulate and first fix</span><span class="stage__note">Spray foam, pipework, boiler</span></li><li><span class="stage__n">Stage 3</span><button class="tile " type="button" data-project="loft-conversion" data-i="5" aria-label="Open photo: New floor laid"><img src="assets/images/loft-conversion/3-sm.webp" srcset="assets/images/loft-conversion/3-sm.webp 480w, assets/images/loft-conversion/3.webp 739w" alt="New floor laid" width="480" height="640" loading="lazy" decoding="async" sizes="(min-width:900px) 22vw, 46vw"></button><span class="stage__name">Floor</span><span class="stage__note">New floor laid</span></li><li><span class="stage__n">Stage 4</span><button class="tile " type="button" data-project="loft-conversion" data-i="8" aria-label="Open photo: Finished room with the boiler boxed in"><img src="assets/images/loft-conversion/7-sm.webp" srcset="assets/images/loft-conversion/7-sm.webp 480w, assets/images/loft-conversion/7.webp 739w" alt="Finished room with the boiler boxed in" width="480" height="640" loading="lazy" decoding="async" sizes="(min-width:900px) 22vw, 46vw"></button><span class="stage__name">Finished</span><span class="stage__note">Plastered, painted, boiler boxed in</span></li></ol>
+</article>
+    
+<article class="job job--lead" id="timber-roof">
+  <div class="job__text">
+    <h3>Hand-cut timber roof</h3>
+    <p>Rafters, ties and braces cut and fitted by hand, with the timbers left on show from inside.</p>
+    <button class="more" type="button" data-project="timber-roof" data-i="0">See all 4 photos</button>
+  </div>
+  <div class="job__photos job__photos--lead">
+    <button class="tile tile--big" type="button" data-project="timber-roof" data-i="0" aria-label="Open photo: Roof timbers from below, looking toward the gable"><img src="assets/images/timber-roof/3-sm.webp" srcset="assets/images/timber-roof/3-sm.webp 480w, assets/images/timber-roof/3.webp 739w" alt="Roof timbers from below, looking toward the gable" width="480" height="640" loading="lazy" decoding="async" sizes="(min-width:900px) 34vw, 94vw"></button>
+    <button class="tile " type="button" data-project="timber-roof" data-i="1" aria-label="Open photo: Rafters, ties and braces cut and fitted"><img src="assets/images/timber-roof/4-sm.webp" srcset="assets/images/timber-roof/4-sm.webp 480w, assets/images/timber-roof/4.webp 739w" alt="Rafters, ties and braces cut and fitted" width="480" height="640" loading="lazy" decoding="async" sizes="(min-width:900px) 22vw, 46vw"></button>
+    <button class="tile " type="button" data-project="timber-roof" data-i="3" aria-label="Open photo: Roof timbers above the old chimney breast"><img src="assets/images/timber-roof/2-sm.webp" srcset="assets/images/timber-roof/2-sm.webp 480w, assets/images/timber-roof/2.webp 739w" alt="Roof timbers above the old chimney breast" width="480" height="640" loading="lazy" decoding="async" sizes="(min-width:900px) 22vw, 46vw"></button>
+  </div>
+</article>
+    
+<article class="job job--flip" id="lead-roof">
+  <div class="job__text">
+    <h3>Leaking lead roof repair</h3>
+    <p>Lead and slate repairs to stop a leaking roof, with the flat sections coated and the flashings made good.</p>
+    <button class="more" type="button" data-project="lead-roof" data-i="0">See all 4 photos</button>
+  </div>
+  <div class="job__photos job__photos--trio">
+    <button class="tile " type="button" data-project="lead-roof" data-i="0" aria-label="Open photo: Lead and slate roof overlooking the water"><img src="assets/images/lead-roof/1-sm.webp" srcset="assets/images/lead-roof/1-sm.webp 480w, assets/images/lead-roof/1.webp 739w" alt="Lead and slate roof overlooking the water" width="480" height="640" loading="lazy" decoding="async" sizes="(min-width:900px) 22vw, 46vw"></button>
+    <button class="tile " type="button" data-project="lead-roof" data-i="2" aria-label="Open photo: Lead flashing running down between the slates"><img src="assets/images/lead-roof/3-sm.webp" srcset="assets/images/lead-roof/3-sm.webp 480w, assets/images/lead-roof/3.webp 739w" alt="Lead flashing running down between the slates" width="480" height="640" loading="lazy" decoding="async" sizes="(min-width:900px) 22vw, 46vw"></button>
+    <button class="tile " type="button" data-project="lead-roof" data-i="3" aria-label="Open photo: Lead and slate work around the chimney"><img src="assets/images/lead-roof/4-sm.webp" srcset="assets/images/lead-roof/4-sm.webp 480w, assets/images/lead-roof/4.webp 739w" alt="Lead and slate work around the chimney" width="480" height="640" loading="lazy" decoding="async" sizes="(min-width:900px) 22vw, 46vw"></button>
+  </div>
+</article>
+    
+<article class="job" id="oak-work">
+  <div class="job__text">
+    <h3>Oak work and indoor canopy</h3>
+    <p>Oak ceiling frames, a staircase with glass balustrade, and a timber canopy built the length of an open-plan office.</p>
+    <button class="more" type="button" data-project="oak-work" data-i="0">See all 12 photos</button>
+  </div>
+  <div class="job__photos job__photos--lead">
+    <button class="tile tile--big" type="button" data-project="oak-work" data-i="0" aria-label="Open photo: Timber canopy built over an open-plan office"><img src="assets/images/indoor-canopy/1-sm.webp" srcset="assets/images/indoor-canopy/1-sm.webp 480w, assets/images/indoor-canopy/1.webp 739w" alt="Timber canopy built over an open-plan office" width="480" height="640" loading="lazy" decoding="async" sizes="(min-width:900px) 34vw, 94vw"></button>
+    <button class="tile " type="button" data-project="oak-work" data-i="5" aria-label="Open photo: Oak staircase with glass balustrade"><img src="assets/images/oak-work/8-sm.webp" srcset="assets/images/oak-work/8-sm.webp 480w, assets/images/oak-work/8.webp 739w" alt="Oak staircase with glass balustrade" width="480" height="640" loading="lazy" decoding="async" sizes="(min-width:900px) 22vw, 46vw"></button>
+    <button class="tile " type="button" data-project="oak-work" data-i="3" aria-label="Open photo: Oak frame set into a plastered ceiling"><img src="assets/images/oak-work/5-sm.webp" srcset="assets/images/oak-work/5-sm.webp 480w, assets/images/oak-work/5.webp 739w" alt="Oak frame set into a plastered ceiling" width="480" height="640" loading="lazy" decoding="async" sizes="(min-width:900px) 22vw, 46vw"></button>
+  </div>
+</article>
+    
+<article class="job job--flip" id="septic-tank">
+  <div class="job__text">
+    <h3>Septic tank installation</h3>
+    <p>Dug out inside a commercial unit: tank set in the ground, the slab cut back, reinforced and poured, then finished level.</p>
+    <button class="more" type="button" data-project="septic-tank" data-i="0">See all 7 photos</button>
+  </div>
+  <div class="job__photos job__photos--quad">
+    <button class="tile " type="button" data-project="septic-tank" data-i="0" aria-label="Open photo: Digging out inside a commercial unit"><img src="assets/images/septic-tank/1-sm.webp" srcset="assets/images/septic-tank/1-sm.webp 480w, assets/images/septic-tank/1.webp 739w" alt="Digging out inside a commercial unit" width="480" height="640" loading="lazy" decoding="async" sizes="(min-width:900px) 22vw, 46vw"></button>
+    <button class="tile " type="button" data-project="septic-tank" data-i="1" aria-label="Open photo: Tank set in the ground"><img src="assets/images/septic-tank/2-sm.webp" srcset="assets/images/septic-tank/2-sm.webp 480w, assets/images/septic-tank/2.webp 739w" alt="Tank set in the ground" width="480" height="640" loading="lazy" decoding="async" sizes="(min-width:900px) 22vw, 46vw"></button>
+    <button class="tile " type="button" data-project="septic-tank" data-i="3" aria-label="Open photo: Reinforcement mesh laid for the new slab"><img src="assets/images/septic-tank/5-sm.webp" srcset="assets/images/septic-tank/5-sm.webp 480w, assets/images/septic-tank/5.webp 739w" alt="Reinforcement mesh laid for the new slab" width="480" height="640" loading="lazy" decoding="async" sizes="(min-width:900px) 22vw, 46vw"></button>
+    <button class="tile " type="button" data-project="septic-tank" data-i="4" aria-label="Open photo: Concrete going in"><img src="assets/images/septic-tank/4-sm.webp" srcset="assets/images/septic-tank/4-sm.webp 480w, assets/images/septic-tank/4.webp 739w" alt="Concrete going in" width="480" height="640" loading="lazy" decoding="async" sizes="(min-width:900px) 22vw, 46vw"></button>
+  </div>
+</article>
+  </section>
+
+  <section class="section" aria-labelledby="more-h" style="padding-top:0">
+    <div class="section__head" style="border-top:1px solid var(--line);padding-top:2.6rem;max-width:none">
+      <h2 id="more-h" style="font-size:clamp(1.8rem,3.4vw,2.5rem)">More jobs</h2>
+    </div>
+    <ul class="cards">
+    <li id="brick-fence">
+      <button class="card" type="button" data-project="brick-fence" data-i="4" aria-label="Open photos: Brick work and feather-edged fencing">
+        <img src="assets/images/brick-fence/5-sm.webp" srcset="assets/images/brick-fence/5-sm.webp 480w, assets/images/brick-fence/5.webp 739w" alt="Wall and fencing complete along the front" width="480" height="640" loading="lazy" decoding="async" sizes="(min-width:900px) 22vw, 46vw">
+      </button>
+      <h3>Brick work and feather-edged fencing</h3>
+      <p>Brick boundary wall with piers, topped with feather-edged boards.</p>
+      <span class="count">10 photos</span>
+    </li>
+    <li id="composite-fence">
+      <button class="card" type="button" data-project="composite-fence" data-i="2" aria-label="Open photos: Composite fencing">
+        <img src="assets/images/composite-fence/3-sm.webp" srcset="assets/images/composite-fence/3-sm.webp 480w, assets/images/composite-fence/3.webp 739w" alt="Composite panels fitted" width="480" height="640" loading="lazy" decoding="async" sizes="(min-width:900px) 22vw, 46vw">
+      </button>
+      <h3>Composite fencing</h3>
+      <p>Composite panels fitted between posts and checked plumb.</p>
+      <span class="count">7 photos</span>
+    </li>
+    <li id="gyproc-work">
+      <button class="card" type="button" data-project="gyproc-work" data-i="2" aria-label="Open photos: Gyproc work">
+        <img src="assets/images/gyproc-work/3-sm.webp" srcset="assets/images/gyproc-work/3-sm.webp 480w, assets/images/gyproc-work/3.webp 739w" alt="Ceiling and walls boarded" width="480" height="640" loading="lazy" decoding="async" sizes="(min-width:900px) 22vw, 46vw">
+      </button>
+      <h3>Gyproc work</h3>
+      <p>Ceilings and walls boarded in a tall building, worked from scaffold.</p>
+      <span class="count">5 photos</span>
+    </li>
+    <li id="acoustic-paneling">
+      <button class="card" type="button" data-project="acoustic-paneling" data-i="2" aria-label="Open photos: Acoustic panelling">
+        <img src="assets/images/acoustic-paneling/3-sm.webp" srcset="assets/images/acoustic-paneling/3-sm.webp 480w, assets/images/acoustic-paneling/3.webp 739w" alt="Finished room with panelling and new floor" width="480" height="640" loading="lazy" decoding="async" sizes="(min-width:900px) 22vw, 46vw">
+      </button>
+      <h3>Acoustic panelling</h3>
+      <p>Slatted acoustic panelling fixed to the lower walls.</p>
+      <span class="count">3 photos</span>
+    </li>
+    <li id="laminate-floor">
+      <button class="card" type="button" data-project="laminate-floor" data-i="2" aria-label="Open photos: Laminate flooring">
+        <img src="assets/images/laminate-floor/2-sm.webp" srcset="assets/images/laminate-floor/2-sm.webp 480w, assets/images/laminate-floor/2.webp 739w" alt="Laminate laid through the living room" width="480" height="640" loading="lazy" decoding="async" sizes="(min-width:900px) 22vw, 46vw">
+      </button>
+      <h3>Laminate flooring</h3>
+      <p>Old boards out, new laminate floor down.</p>
+      <span class="count">4 photos</span>
+    </li>
+    <li id="loft-hatch">
+      <button class="card" type="button" data-project="loft-hatch" data-i="0" aria-label="Open photos: Loft hatch installation">
+        <img src="assets/images/loft-hatch/1-sm.webp" srcset="assets/images/loft-hatch/1-sm.webp 480w, assets/images/loft-hatch/1.webp 739w" alt="Hatch opening cut and lined" width="480" height="640" loading="lazy" decoding="async" sizes="(min-width:900px) 22vw, 46vw">
+      </button>
+      <h3>Loft hatch installation</h3>
+      <p>Hatches cut into ceilings and framed with a clean finish.</p>
+      <span class="count">5 photos</span>
+    </li>
+    <li id="kitchen">
+      <button class="card" type="button" data-project="kitchen" data-i="0" aria-label="Open photos: Small kitchen fit-out">
+        <img src="assets/images/kitchen/1-sm.webp" srcset="assets/images/kitchen/1-sm.webp 480w, assets/images/kitchen/1.webp 739w" alt="Units going in once the walls are plastered" width="480" height="640" loading="lazy" decoding="async" sizes="(min-width:900px) 22vw, 46vw">
+      </button>
+      <h3>Small kitchen fit-out</h3>
+      <p>Small kitchen fit-out, units going in once the walls are plastered.</p>
+      <span class="count">2 photos</span>
+    </li>
+    </ul>
+  </section>
+
+  <section class="section services" id="services" aria-labelledby="svc-h" style="padding-top:0">
+    <div class="section__head" style="margin-bottom:0">
+      <h2 id="svc-h">What we do</h2>
+      <p>The full list, from the first dig to the finished room.</p>
+      <p class="note">Joinery runs through all of it: oak work, stairs, hatches, panelling, fencing and floors.</p>
+    </div>
+    <ul class="svc"><li><span>Renovations</span><a href="#laminate-floor">See photos</a></li><li><span>Conversions</span><a href="#loft-conversion">See photos</a></li><li><span>Bathrooms</span></li><li><span>Kitchens</span><a href="#kitchen">See photos</a></li><li><span>Windows</span></li><li><span>Doors</span></li><li><span>Glazing</span></li><li><span>Roofing</span><a href="#timber-roof">See photos</a></li><li><span>PVC</span></li><li><span>Gutters</span></li><li><span>Gardens</span><a href="#brick-fence">See photos</a></li><li><span>Excavation</span><a href="#septic-tank">See photos</a></li></ul>
+  </section>
+  </main>
+</div>
+
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <h2 id="contact-h">Got a job in mind?</h2>
+    <p>Call, or send a message with a few photos and what needs doing.</p>
+    <a class="phone" href="tel:+447311822986">07311 822986</a>
+    <div class="cta">
+      <a class="btn btn--solid" href="tel:+447311822986">Call now</a>
+      <a class="btn btn--line" href="https://wa.me/447311822986?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20some%20work." rel="noopener">Message on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <a class="brand" href="./"><span class="mark" role="img" aria-label="L.D monogram"></span><span>L.D Construction</span></a>
+    <span>&copy; 2026 L.D Construction. Site by <a href="https://getpresented.co.uk">getPresented.</a></span>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn--solid" href="tel:+447311822986">Call</a>
+  <a class="btn btn--line" href="https://wa.me/447311822986?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20some%20work." rel="noopener">WhatsApp</a>
+</div>
+
+<dialog class="lb" id="lb" aria-label="Project photos">
+  <div class="lb__in">
+    <button class="lb__x" type="button" aria-label="Close photos">Close</button>
+    <button class="lb__prev" type="button" aria-label="Previous photo">&#8592;</button>
+    <button class="lb__next" type="button" aria-label="Next photo">&#8594;</button>
+    <div class="lb__stage"><img id="lb-img" alt=""></div>
+    <div class="lb__bar">
+      <div class="lb__cap"><b id="lb-title"></b><span id="lb-cap"></span></div>
+      <span class="lb__count" id="lb-count"></span>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  var DATA = {
+ "loft-conversion": {
+  "title": "Loft conversion",
+  "photos": [
+   {
+    "src": "assets/images/loft-conversion/1.webp",
+    "cap": "Steel in place and the roof structure opened up"
+   },
+   {
+    "src": "assets/images/loft-conversion/2.webp",
+    "cap": "Steel and decking going in"
+   },
+   {
+    "src": "assets/images/loft-conversion/6.webp",
+    "cap": "Spray-foam insulation, pipework and boiler fitted"
+   },
+   {
+    "src": "assets/images/loft-conversion/8.webp",
+    "cap": "Insulation done, collar ties still exposed"
+   },
+   {
+    "src": "assets/images/loft-conversion/4.webp",
+    "cap": "Roof windows in, slopes insulated and boarded"
+   },
+   {
+    "src": "assets/images/loft-conversion/3.webp",
+    "cap": "New floor laid"
+   },
+   {
+    "src": "assets/images/loft-conversion/10.webp",
+    "cap": "Gable wall framed out"
+   },
+   {
+    "src": "assets/images/loft-conversion/5.webp",
+    "cap": "Plastered and painted, with built-in cupboard doors"
+   },
+   {
+    "src": "assets/images/loft-conversion/7.webp",
+    "cap": "Finished room with the boiler boxed in"
+   },
+   {
+    "src": "assets/images/loft-conversion/9.webp",
+    "cap": "Finished room"
+   }
+  ]
+ },
+ "timber-roof": {
+  "title": "Hand-cut timber roof",
+  "photos": [
+   {
+    "src": "assets/images/timber-roof/3.webp",
+    "cap": "Roof timbers from below, looking toward the gable"
+   },
+   {
+    "src": "assets/images/timber-roof/4.webp",
+    "cap": "Rafters, ties and braces cut and fitted"
+   },
+   {
+    "src": "assets/images/timber-roof/1.webp",
+    "cap": "Rafters and braces meeting at the ridge"
+   },
+   {
+    "src": "assets/images/timber-roof/2.webp",
+    "cap": "Roof timbers above the old chimney breast"
+   }
+  ]
+ },
+ "lead-roof": {
+  "title": "Leaking lead roof repair",
+  "photos": [
+   {
+    "src": "assets/images/lead-roof/1.webp",
+    "cap": "Lead and slate roof overlooking the water"
+   },
+   {
+    "src": "assets/images/lead-roof/2.webp",
+    "cap": "Repaired and coated flat section beside the slates"
+   },
+   {
+    "src": "assets/images/lead-roof/3.webp",
+    "cap": "Lead flashing running down between the slates"
+   },
+   {
+    "src": "assets/images/lead-roof/4.webp",
+    "cap": "Lead and slate work around the chimney"
+   }
+  ]
+ },
+ "oak-work": {
+  "title": "Oak work and indoor canopy",
+  "photos": [
+   {
+    "src": "assets/images/indoor-canopy/1.webp",
+    "cap": "Timber canopy built over an open-plan office"
+   },
+   {
+    "src": "assets/images/indoor-canopy/3.webp",
+    "cap": "Timber canopy, from the other end"
+   },
+   {
+    "src": "assets/images/indoor-canopy/2.webp",
+    "cap": "Canopy frame going up"
+   },
+   {
+    "src": "assets/images/oak-work/5.webp",
+    "cap": "Oak frame set into a plastered ceiling"
+   },
+   {
+    "src": "assets/images/oak-work/7.webp",
+    "cap": "Oak ceiling frame, close up"
+   },
+   {
+    "src": "assets/images/oak-work/8.webp",
+    "cap": "Oak staircase with glass balustrade"
+   },
+   {
+    "src": "assets/images/oak-work/6.webp",
+    "cap": "Oak stair treads"
+   },
+   {
+    "src": "assets/images/oak-work/2.webp",
+    "cap": "Oak lengths ready to fit"
+   },
+   {
+    "src": "assets/images/oak-work/1.webp",
+    "cap": "Oak trims cut to length"
+   },
+   {
+    "src": "assets/images/oak-work/3.webp",
+    "cap": "Oak frames fixed before the ceiling was finished"
+   },
+   {
+    "src": "assets/images/oak-work/4.webp",
+    "cap": "Ceiling frame before the finish coat"
+   },
+   {
+    "src": "assets/images/oak-work/9.webp",
+    "cap": "Oak steps"
+   }
+  ]
+ },
+ "septic-tank": {
+  "title": "Septic tank installation",
+  "photos": [
+   {
+    "src": "assets/images/septic-tank/1.webp",
+    "cap": "Digging out inside a commercial unit"
+   },
+   {
+    "src": "assets/images/septic-tank/2.webp",
+    "cap": "Tank set in the ground"
+   },
+   {
+    "src": "assets/images/septic-tank/3.webp",
+    "cap": "Old floor slab cut back"
+   },
+   {
+    "src": "assets/images/septic-tank/5.webp",
+    "cap": "Reinforcement mesh laid for the new slab"
+   },
+   {
+    "src": "assets/images/septic-tank/4.webp",
+    "cap": "Concrete going in"
+   },
+   {
+    "src": "assets/images/septic-tank/6.webp",
+    "cap": "Slab poured and levelled"
+   },
+   {
+    "src": "assets/images/septic-tank/7.webp",
+    "cap": "Access cover set outside the unit"
+   }
+  ]
+ },
+ "brick-fence": {
+  "title": "Brick work and feather-edged fencing",
+  "photos": [
+   {
+    "src": "assets/images/brick-fence/1.webp",
+    "cap": "Brick wall and piers going up at the front"
+   },
+   {
+    "src": "assets/images/brick-fence/2.webp",
+    "cap": "Wall built, fence rails going on"
+   },
+   {
+    "src": "assets/images/brick-fence/3.webp",
+    "cap": "Feather-edged boards going in"
+   },
+   {
+    "src": "assets/images/brick-fence/4.webp",
+    "cap": "Boards fixed between the piers"
+   },
+   {
+    "src": "assets/images/brick-fence/5.webp",
+    "cap": "Wall and fencing complete along the front"
+   },
+   {
+    "src": "assets/images/brick-fence/6.webp",
+    "cap": "Return wall and fence down the side"
+   },
+   {
+    "src": "assets/images/brick-fence/7.webp",
+    "cap": "Rear garden boundary fenced"
+   },
+   {
+    "src": "assets/images/brick-fence/8.webp",
+    "cap": "Fence panels at the side of the house"
+   },
+   {
+    "src": "assets/images/brick-fence/9.webp",
+    "cap": "Wall and fence along the path"
+   },
+   {
+    "src": "assets/images/brick-fence/10.webp",
+    "cap": "Checking the post is plumb"
+   }
+  ]
+ },
+ "composite-fence": {
+  "title": "Composite fencing",
+  "photos": [
+   {
+    "src": "assets/images/composite-fence/1.webp",
+    "cap": "Posts set along the boundary"
+   },
+   {
+    "src": "assets/images/composite-fence/2.webp",
+    "cap": "Old fence behind, new posts going in"
+   },
+   {
+    "src": "assets/images/composite-fence/3.webp",
+    "cap": "Composite panels fitted"
+   },
+   {
+    "src": "assets/images/composite-fence/7.webp",
+    "cap": "Finished composite fence along the garden"
+   },
+   {
+    "src": "assets/images/composite-fence/5.webp",
+    "cap": "Light composite panels on a side boundary"
+   },
+   {
+    "src": "assets/images/composite-fence/4.webp",
+    "cap": "Checking the post with a level"
+   },
+   {
+    "src": "assets/images/composite-fence/6.webp",
+    "cap": "Post checked plumb"
+   }
+  ]
+ },
+ "gyproc-work": {
+  "title": "Gyproc work",
+  "photos": [
+   {
+    "src": "assets/images/gyproc-work/1.webp",
+    "cap": "Metal grid ceiling going up, worked from scaffold"
+   },
+   {
+    "src": "assets/images/gyproc-work/2.webp",
+    "cap": "Ceiling grid and boarding"
+   },
+   {
+    "src": "assets/images/gyproc-work/3.webp",
+    "cap": "Ceiling and walls boarded"
+   },
+   {
+    "src": "assets/images/gyproc-work/4.webp",
+    "cap": "Tall arched room being lined"
+   },
+   {
+    "src": "assets/images/gyproc-work/5.webp",
+    "cap": "Boarding finished, arches and windows left clear"
+   }
+  ]
+ },
+ "acoustic-paneling": {
+  "title": "Acoustic panelling",
+  "photos": [
+   {
+    "src": "assets/images/acoustic-paneling/1.webp",
+    "cap": "Slatted panelling fixed to the lower walls"
+   },
+   {
+    "src": "assets/images/acoustic-paneling/2.webp",
+    "cap": "Panelling running along the room"
+   },
+   {
+    "src": "assets/images/acoustic-paneling/3.webp",
+    "cap": "Finished room with panelling and new floor"
+   }
+  ]
+ },
+ "laminate-floor": {
+  "title": "Laminate flooring",
+  "photos": [
+   {
+    "src": "assets/images/laminate-floor/4.webp",
+    "cap": "Old floor lifted, bare boards"
+   },
+   {
+    "src": "assets/images/laminate-floor/1.webp",
+    "cap": "Floor prepared before the new laminate"
+   },
+   {
+    "src": "assets/images/laminate-floor/2.webp",
+    "cap": "Laminate laid through the living room"
+   },
+   {
+    "src": "assets/images/laminate-floor/3.webp",
+    "cap": "Laminate laid, looking down the room"
+   }
+  ]
+ },
+ "loft-hatch": {
+  "title": "Loft hatch installation",
+  "photos": [
+   {
+    "src": "assets/images/loft-hatch/1.webp",
+    "cap": "Hatch opening cut and lined"
+   },
+   {
+    "src": "assets/images/loft-hatch/2.webp",
+    "cap": "Hatch door fitted flush"
+   },
+   {
+    "src": "assets/images/loft-hatch/3.webp",
+    "cap": "Hatch frame set in the joists"
+   },
+   {
+    "src": "assets/images/loft-hatch/4.webp",
+    "cap": "Looking up through the new opening"
+   },
+   {
+    "src": "assets/images/loft-hatch/5.webp",
+    "cap": "Opening framed and lined"
+   }
+  ]
+ },
+ "kitchen": {
+  "title": "Small kitchen fit-out",
+  "photos": [
+   {
+    "src": "assets/images/kitchen/1.webp",
+    "cap": "Units going in once the walls are plastered"
+   },
+   {
+    "src": "assets/images/kitchen/2.webp",
+    "cap": "Kitchen room ready for units"
+   }
+  ]
+ }
+};
+  var dlg = document.getElementById('lb'), img = document.getElementById('lb-img'),
+      ttl = document.getElementById('lb-title'), cap = document.getElementById('lb-cap'),
+      cnt = document.getElementById('lb-count');
+  var cur = null, i = 0, opener = null;
+
+  function show(){
+    var p = DATA[cur], ph = p.photos[i];
+    img.src = ph.src; img.alt = ph.cap;
+    ttl.textContent = p.title; cap.textContent = ph.cap;
+    cnt.textContent = (i+1) + ' of ' + p.photos.length;
+    var n = p.photos[(i+1) % p.photos.length]; (new Image()).src = n.src;
+  }
+  function open(pid, idx, from){
+    cur = pid; i = idx; opener = from; show();
+    if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open','');
+  }
+  function step(d){ var n = DATA[cur].photos.length; i = (i + d + n) % n; show(); }
+
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('[data-project]');
+    if (b) open(b.getAttribute('data-project'), parseInt(b.getAttribute('data-i'),10) || 0, b);
+  });
+  dlg.querySelector('.lb__x').addEventListener('click', function(){ dlg.close(); });
+  dlg.querySelector('.lb__prev').addEventListener('click', function(){ step(-1); });
+  dlg.querySelector('.lb__next').addEventListener('click', function(){ step(1); });
+  dlg.addEventListener('click', function(e){ if (e.target === dlg || e.target.classList.contains('lb__stage')) dlg.close(); });
+  dlg.addEventListener('close', function(){ if (opener) opener.focus(); });
+  dlg.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowLeft') step(-1);
+    if (e.key === 'ArrowRight') step(1);
+  });
+  var sx = null;
+  dlg.addEventListener('touchstart', function(e){ sx = e.touches[0].clientX; }, {passive:true});
+  dlg.addEventListener('touchend', function(e){
+    if (sx === null) return; var dx = e.changedTouches[0].clientX - sx; sx = null;
+    if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1);
+  });
+})();
+</script>
+</body>
+</html>
