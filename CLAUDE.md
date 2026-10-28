@@ -20,8 +20,11 @@ quote/index.html      Get a quote: call / WhatsApp, and what to send
 404.html              Minimal not-found page (styles inline)
 assets/site.css       ONE shared stylesheet for every page (change design here, once)
 assets/lightbox.js    Lightbox, used on /work/ only. Reads window.LD_DATA from that page
-assets/images/<project>/<n>.webp       Full photos (739-1000px wide, 3:4)
-assets/images/<project>/<n>-sm.webp    480px thumbnails used in the grid
+assets/images/<project>/<n>.webp       Full photo, max 1000px wide (lightbox only)
+assets/images/<project>/<n>-md.webp    640px version (grid tiles on sharp phone screens)
+assets/images/<project>/<n>-sm.webp    480px version (grid tiles, default)
+assets/site.js        Loads lazy images ~1200px ahead of the scroll, the same in every browser
+docs/prepare-photo.py  Crops, resizes and makes all three sizes + placeholder for a new photo
 assets/fonts/         Self-hosted Bodoni Moda + Montserrat (subset woff2). No Google Fonts calls.
 assets/logo-mark.png  The client's LD monogram, black with transparent background (recoloured in CSS with a mask)
 assets/og-image.jpg   1200x630 share image
@@ -68,7 +71,7 @@ The header, footer and mobile call bar are repeated in each page: when you chang
 ## How to change things
 **Edit text, phone, links:** edit the page directly. The phone number appears on every page (nav, hero, quote band, call bar, WhatsApp link), in the home page JSON-LD, in `404.html` and baked into `assets/og-image.jpg`. Search the repo for `7311` and update every one.
 
-**Add photos to an existing project:** (1) add `n.webp` (max 1000px wide, 3:4, quality ~80) and `n-sm.webp` (480px wide) to `assets/images/<project>/`; (2) add an entry to the project's `photos` array in `window.LD_DATA` in the `<script>` at the bottom of `work/index.html`; order in the array is the lightbox order; (3) update the "N photos" / "See all N photos" text.
+**Add photos to an existing project:** (1) run `python3 docs/prepare-photo.py <photo> <project> <n>` (makes `n.webp`, `n-md.webp`, `n-sm.webp` and prints an optional blurred placeholder for the tile's `style="background-image:url(...)"`); (2) add an entry to the project's `photos` array in `window.LD_DATA` in the `<script>` at the bottom of `work/index.html`; order in the array is the lightbox order; (3) update the "N photos" / "See all N photos" text.
 
 **Add a new project:** in `work/index.html`, copy an existing `<article class="job">` (featured) or `<li>` in `ul.cards` (compact), give it a unique `id`, point its buttons at a new key via `data-project` / `data-i`, and add that key to `LD_DATA`. If it matches a service, update that service's "See photos" link in `services/index.html`.
 
@@ -76,7 +79,9 @@ The header, footer and mobile call bar are repeated in each page: when you chang
 
 **New page:** copy `quote/index.html`, change title/description/canonical/og:url and the nav `aria-current`, add it to the nav and footer on every page and to `sitemap.xml`.
 
-**Phone photos:** client screenshots often arrive with black bars top and bottom. Crop to the photo before adding.
+**Phone photos:** screenshots with black bars are cropped automatically by `docs/prepare-photo.py`.
+
+**Image loading rules (do not undo):** grid tiles use `srcset` with only the `-sm` and `-md` files, never the full photo; full photos are for the lightbox. Hero image is the only high-priority image. Gallery tiles keep their blurred placeholder background. Anything above the fold is `loading="eager"`; everything else `loading="lazy"`.
 
 ## Edit workflow (edit-by-message service)
 - Check the message comes from the number/email on file (private client list).

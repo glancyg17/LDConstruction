@@ -8,3 +8,4 @@
 | 2026-10-28 | Copy rewrite | New headline idea, hero, captions, services and quote copy | n/a (build) | |
 | 2026-10-28 | Modernise level graphic | Hairline scale + glass vial replaces blue bar | n/a (build) | |
 | 2026-10-28 | Local SEO | Bellshill/Scotland in titles, hero, footer, services, FAQ; LocalBusiness schema; llms.txt | n/a (build) | |
+| 2026-10-28 | Image load speed | 640px tile size, blurred placeholders, scroll-ahead loader, prepare-photo helper | n/a (build) | |
