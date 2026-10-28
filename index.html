@@ -6,6 +6,7 @@
 <title>L.D Construction | Joinery and construction work</title>
 <meta name="description" content="L.D Construction: joinery and construction work including loft conversions, roofing, oak work, fencing, flooring and excavation. Call 07311 822986.">
 <meta name="robots" content="index, follow">
+<!-- TODO: set the real domain once agreed (canonical, og:url, og:image, sitemap.xml, robots.txt, CNAME) -->
 <link rel="canonical" href="https://ldconstruction.trade/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="L.D Construction | Joinery and construction work">
@@ -14,7 +15,7 @@
 <meta property="og:image" content="https://ldconstruction.trade/assets/og-image.jpg">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#F2F3F0">
+<meta name="theme-color" content="#1C2124">
 <link rel="icon" href="assets/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/bodoni-moda.woff2" as="font" type="font/woff2" crossorigin>
@@ -29,14 +30,15 @@
 @font-face{font-family:"Montserrat";src:url(assets/fonts/montserrat.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
 
 :root{
-  /* palette, taken from the work itself */
-  --chalk:#F2F3F0;      /* plasterboard */
-  --ink:#000;           /* the logo */
-  --slate:#2F3438;      /* roof slate: body text and the dark band */
-  --mute:#5A6267;
-  --line:#CBD0CC;
-  --level:#1B8FCC;      /* the blue spirit level that turns up in the photos */
-  --level-d:#0E6AA0;
+  /* palette, taken from the work itself: roof slate, plasterboard, the blue spirit level */
+  --bg:#1C2124;         /* deep roof slate */
+  --panel:#272D31;      /* lifted slate: photo wells, contact band */
+  --head:#F4F5F2;       /* plasterboard white: headings, buttons */
+  --body:#D6DBD7;       /* body copy */
+  --mute:#A6AFAA;       /* secondary copy */
+  --line:#3C454A;
+  --level:#1B8FCC;      /* the blue spirit level in the photos */
+  --level-d:#6CC1F2;    /* same blue, lightened for text on dark */
   --display:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
   --text:"Montserrat",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --wrap:1180px;
@@ -46,37 +48,37 @@
 }
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-behavior:smooth;scroll-padding-top:1rem;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--chalk);color:var(--slate);font:400 1.0625rem/1.65 var(--text);-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--bg);color:var(--body);color-scheme:dark;font:400 1.0625rem/1.65 var(--text);-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
-h1,h2,h3{margin:0;color:var(--ink);font-family:var(--display);font-weight:700;letter-spacing:-.015em;text-wrap:balance;font-optical-sizing:none;font-variation-settings:"opsz" 30}
+h1,h2,h3{margin:0;color:var(--head);font-family:var(--display);font-weight:700;letter-spacing:-.015em;text-wrap:balance;font-optical-sizing:none;font-variation-settings:"opsz" 30}
 p{margin:0}
 :focus-visible{outline:3px solid var(--level);outline-offset:3px}
 .wrap{width:min(100% - 2.5rem,var(--wrap));margin-inline:auto}
-.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--chalk);padding:.75rem 1rem;z-index:100}
+.skip{position:absolute;left:-999px;top:0;background:var(--head);color:var(--bg);padding:.75rem 1rem;z-index:100}
 .skip:focus{left:0}
 
 /* logo mark: the client's own LD monogram, recoloured with a mask */
 .mark{display:inline-block;aspect-ratio:1;background:currentColor;-webkit-mask:url(assets/logo-mark.png) center/contain no-repeat;mask:url(assets/logo-mark.png) center/contain no-repeat}
 
 /* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:3.25rem;padding:.8rem 1.6rem;border:2px solid var(--ink);border-radius:2px;font:600 1rem/1.2 var(--text);text-decoration:none;cursor:pointer;background:transparent;color:var(--ink)}
-.btn--solid{background:var(--ink);color:var(--chalk)}
-.btn--solid:hover{background:var(--slate);border-color:var(--slate)}
-.btn--line:hover{background:var(--ink);color:var(--chalk)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:3.25rem;padding:.8rem 1.6rem;border:2px solid var(--head);border-radius:2px;font:600 1rem/1.2 var(--text);text-decoration:none;cursor:pointer;background:transparent;color:var(--head)}
+.btn--solid{background:var(--head);color:var(--bg)}
+.btn--solid:hover{background:#fff;border-color:#fff}
+.btn--line:hover{background:var(--head);color:var(--bg)}
 .btn svg{width:1.15em;height:1.15em;flex:none}
 
 /* header */
 .top{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:1.1rem}
-.brand{display:inline-flex;align-items:center;gap:.8rem;text-decoration:none;color:var(--ink);font:600 1rem/1 var(--text)}
+.brand{display:inline-flex;align-items:center;gap:.8rem;text-decoration:none;color:var(--head);font:600 1rem/1 var(--text)}
 .brand .mark{width:2.6rem}
-.top__call{font:600 1rem var(--text);text-decoration:none;color:var(--ink);border-bottom:2px solid var(--ink);padding-bottom:.15rem;display:none}
+.top__call{font:600 1rem var(--text);text-decoration:none;color:var(--head);border-bottom:2px solid var(--head);padding-bottom:.15rem;display:none}
 .top__call:hover{border-color:var(--level)}
 
 /* hero */
 .hero{display:grid;gap:2.5rem;padding-block:clamp(1.5rem,4vw,3rem) clamp(2rem,4vw,3rem);align-items:center}
 .hero h1{font-size:clamp(3rem,9.2vw,6.4rem);line-height:1.03;letter-spacing:-.02em}
-.lede{margin-top:1.6rem;max-width:34rem;font-size:1.15rem;color:var(--slate)}
+.lede{margin-top:1.6rem;max-width:34rem;font-size:1.15rem;color:var(--body)}
 .cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
 .hero__photo{margin:0}
 .hero__photo img{width:100%;aspect-ratio:3/4;object-fit:cover}
@@ -108,9 +110,9 @@ p{margin:0}
 .job{display:grid;gap:1.4rem;padding-block:2.6rem;border-top:1px solid var(--line)}
 .job h3{font-size:clamp(1.7rem,3.2vw,2.3rem);line-height:1.08}
 .job__text p{margin-top:.8rem;max-width:30rem}
-.more{margin-top:1.2rem;padding:0 0 .15rem;border:0;border-bottom:2px solid var(--ink);background:none;font:600 .95rem var(--text);color:var(--ink);cursor:pointer}
+.more{margin-top:1.2rem;padding:0 0 .15rem;border:0;border-bottom:2px solid var(--head);background:none;font:600 .95rem var(--text);color:var(--head);cursor:pointer}
 .more:hover{border-color:var(--level)}
-.tile,.card{display:block;width:100%;padding:0;border:0;background:#d5d9d4;cursor:zoom-in;overflow:hidden}
+.tile,.card{display:block;width:100%;padding:0;border:0;background:var(--panel);cursor:zoom-in;overflow:hidden}
 .tile img,.card img{width:100%;height:100%;aspect-ratio:3/4;object-fit:cover}
 .job__photos{display:grid;gap:.7rem;grid-template-columns:repeat(2,1fr)}
 .job__photos--lead .tile--big{grid-column:1/-1}
@@ -122,46 +124,42 @@ p{margin:0}
 .stages{list-style:none;margin:0;padding:0;display:grid;grid-auto-flow:column;grid-auto-columns:72%;gap:.8rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.6rem}
 .stages li{scroll-snap-align:start;display:flex;flex-direction:column;gap:.35rem}
 .stage__n{font:700 .95rem var(--text);color:var(--level-d)}
-.stage__name{font:700 1.05rem/1.2 var(--text);color:var(--ink);margin-top:.25rem}
+.stage__name{font:700 1.05rem/1.2 var(--text);color:var(--head);margin-top:.25rem}
 .stage__note{font-size:.92rem;color:var(--mute);line-height:1.4}
 
 /* more jobs */
 .cards{list-style:none;margin:0;padding:0;display:grid;gap:2rem .8rem;grid-template-columns:repeat(2,1fr)}
 .cards h3{font:700 1.02rem/1.25 var(--text);letter-spacing:0;margin-top:.8rem}
-.cards p{font-size:.92rem;line-height:1.5;margin-top:.3rem;color:var(--slate)}
+.cards p{font-size:.92rem;line-height:1.5;margin-top:.3rem;color:var(--body)}
 .count{display:block;margin-top:.4rem;font-size:.85rem;color:var(--mute)}
 .card:hover img{filter:brightness(1.06)}
 
 /* services */
 .services{display:grid;gap:2rem}
-.svc{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
-.svc li{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--line);font:600 1.15rem var(--text);color:var(--ink)}
+.svc{list-style:none;margin:0;padding:0;border-top:2px solid var(--head)}
+.svc li{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--line);font:600 1.15rem var(--text);color:var(--head)}
 .svc a{font:500 .92rem var(--text);color:var(--level-d);text-underline-offset:.2em}
 .note{margin-top:1.4rem;max-width:34rem;color:var(--mute);font-size:.98rem}
 
 /* contact: the only dark band */
-.contact{background:var(--slate);color:var(--chalk);padding-block:clamp(3.5rem,8vw,7rem)}
-.contact h2{color:var(--chalk);font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.02}
-.contact p{margin-top:1rem;max-width:32rem;color:#d7dbd6}
-.phone{display:block;margin-top:1.8rem;font:700 clamp(2.5rem,10vw,6rem)/1.05 var(--display);font-optical-sizing:none;font-variation-settings:"opsz" 30;letter-spacing:-.02em;color:var(--chalk);text-decoration:none}
+.contact{background:var(--panel);color:var(--head);padding-block:clamp(3.5rem,8vw,7rem)}
+.contact h2{color:var(--head);font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.02}
+.contact p{margin-top:1rem;max-width:32rem;color:var(--body)}
+.phone{display:block;margin-top:1.8rem;font:700 clamp(2.5rem,10vw,6rem)/1.05 var(--display);font-optical-sizing:none;font-variation-settings:"opsz" 30;letter-spacing:-.02em;color:var(--head);text-decoration:none}
 .phone:hover{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:.12em;text-decoration-color:var(--level)}
 .contact .cta{margin-top:2rem}
-.contact .btn{border-color:var(--chalk);color:var(--chalk)}
-.contact .btn--solid{background:var(--chalk);color:var(--ink)}
-.contact .btn--solid:hover{background:#fff;border-color:#fff}
-.contact .btn--line:hover{background:var(--chalk);color:var(--ink)}
 
-.foot{background:var(--chalk);padding-block:2rem 6.5rem;font-size:.9rem;color:var(--mute)}
+.foot{background:var(--bg);padding-block:2rem 6.5rem;font-size:.9rem;color:var(--mute)}
 .foot .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem}
 .foot .brand{font-size:.95rem}
 .foot .brand .mark{width:2rem}
 
 /* mobile call bar */
-.callbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1fr 1fr;gap:.6rem;padding:.7rem .9rem calc(.7rem + env(safe-area-inset-bottom,0px));background:var(--chalk);border-top:1px solid var(--line)}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1fr 1fr;gap:.6rem;padding:.7rem .9rem calc(.7rem + env(safe-area-inset-bottom,0px));background:var(--bg);border-top:1px solid var(--line)}
 .callbar .btn{min-height:3rem;padding:.6rem 1rem}
 
 /* lightbox */
-dialog.lb{border:0;padding:0;background:transparent;max-width:none;max-height:none;width:100%;height:100%;color:var(--chalk)}
+dialog.lb{border:0;padding:0;background:transparent;max-width:none;max-height:none;width:100%;height:100%;color:var(--head)}
 dialog.lb::backdrop{background:rgba(20,23,25,.985)}
 .lb__in{position:relative;height:100%;display:grid;grid-template-rows:1fr auto;padding:3.5rem .8rem 1rem}
 .lb__stage{min-height:0;display:grid;place-items:center}
@@ -170,7 +168,7 @@ dialog.lb::backdrop{background:rgba(20,23,25,.985)}
 .lb__cap{font-size:.98rem;line-height:1.45}
 .lb__cap b{display:block;font-family:var(--display);font-size:1.25rem;margin-bottom:.15rem}
 .lb__count{white-space:nowrap;font-size:.9rem;color:#c3c9c4}
-.lb button{font:600 1rem var(--text);color:var(--chalk);background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);border-radius:2px;cursor:pointer;min-width:3rem;min-height:3rem}
+.lb button{font:600 1rem var(--text);color:var(--head);background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);border-radius:2px;cursor:pointer;min-width:3rem;min-height:3rem}
 .lb button:hover{background:rgba(255,255,255,.24)}
 .lb__x{position:absolute;top:.7rem;right:.8rem}
 .lb__prev,.lb__next{position:absolute;top:50%;margin-top:-1.5rem;font-size:1.4rem!important}
