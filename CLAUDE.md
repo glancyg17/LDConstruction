@@ -8,7 +8,8 @@ Static multi-page site for L.D Construction, built by getPresented. Hosted on Gi
 - **Services (from their own logo sheet):** renovations, conversions, bathrooms, kitchens, windows, doors, glazing, roofing, PVC, gutters, gardens, excavation
 - **Phone (public):** 07311 822986 (`tel:+447311822986`). WhatsApp link uses the same number: confirm it is a WhatsApp number.
 - **Domain:** ldconstruction.trade
-- **Not yet known:** area covered, email address, owner's name, insurance/accreditations. Do not invent any of these. Leave them out until supplied.
+- **Base:** Bellshill, North Lanarkshire (near Glasgow). **Covers:** all of Scotland. Service-area business: **no public street address**, so never publish one on the site or in schema unless the client says so.
+- **Not yet known:** email address, owner's name, insurance/accreditations, opening hours. Do not invent any of these. Leave them out until supplied.
 
 ## Files
 ```
@@ -37,6 +38,17 @@ The header, footer and mobile call bar are repeated in each page: when you chang
 - **The level graphic** (home hero) is a precision instrument, not a toy: hairline scale with fading ticks, glass vial, pale bubble that settles once on load, centre marks turning blue when it locks level. Pure CSS in `assets/site.css`; static and already locked under `prefers-reduced-motion`. Keep it small, monochrome and quiet; do not return to a coloured plastic bar.
 - **No** all-caps labels, eyebrow text, stock icons, gradients (except the level graphic), testimonial cards or scroll animations.
 - Sentence case, plain British English, no hype.
+
+## SEO and local (what is in place, what is not)
+**On the site:** Bellshill and Scotland appear in every page title/description (where natural), the home hero, the footer (with phone, same wording on every page), the services page ("Where we work") and the quote-page Questions. Home page carries JSON-LD (`LocalBusiness` + `GeneralContractor`, locality only, `areaServed` Scotland/Glasgow/Lanarkshire, service catalogue). `llms.txt` is a harmless summary for AI tools (Google says it is not needed for its own AI features). One H1 per page, descriptive alt text, canonical, sitemap, fast pages.
+**Keep consistent everywhere (name, phone, area wording):** "L.D Construction", 07311 822986, "Bellshill, North Lanarkshire, working across Scotland". Any mismatch between site, Google Business Profile and directories weakens local ranking.
+**Do not:** add fake reviews or ratings to schema, add a street address, add FAQ/HowTo schema for rich results (no benefit), keyword-stuff, or list dozens of towns.
+**Off-site (biggest remaining wins, owner/getPresented to do):**
+- [ ] **Google Business Profile**: service-area business, address hidden, base Bellshill, service area Scotland-wide (Google ranks from the hidden base, so Lanarkshire/Glasgow will rank best), categories (general contractor, joiner, roofing contractor), services, the best photos, link to https://ldconstruction.trade
+- [ ] **Reviews**: ask every finished customer for a Google review; reply to each. Then add real quotes to the site.
+- [ ] Search Console (verify domain, submit sitemap.xml) and Bing Webmaster Tools / Bing Places; Apple Business Connect
+- [ ] Facebook page and a few trade/local directories with identical name/phone/area
+- [ ] Phase 2 pages (only with real content): one page each for loft conversions, roofing, joinery/oak work, fencing, groundworks, each with its own photos and project detail. Plus a page per area only where genuine jobs exist.
 
 ## Voice (keep it premium)
 **The idea:** *Level, plumb and square.* Precision, shown rather than claimed. The spirit level in the hero and in many of the photos is the through-line. Every page should sound like the same quiet, certain person.
@@ -75,7 +87,8 @@ The header, footer and mobile call bar are repeated in each page: when you chang
 ## Open items (as at 28 Oct 2026)
 - [x] Domain is **ldconstruction.trade**: canonical, og tags, JSON-LD, robots.txt, sitemap.xml and `CNAME` all updated
 - [ ] Buy the domain (Namecheap), then DNS: A records `@` to 185.199.108.153 / .109.153 / .110.153 / .111.153, CNAME `www` to `glancyg17.github.io`; enable Pages custom domain + HTTPS
-- [ ] Area covered, email address, owner name (add to contact + JSON-LD `areaServed`)
+- [x] Area: Bellshill base, Scotland-wide (done on site)
+- [ ] Email address, owner name (add to contact + JSON-LD)
 - [ ] Confirm 07311 822986 is on WhatsApp
 - [ ] Quote page has no form (no email address yet). If an email is supplied, consider adding a FormSubmit form
 - [ ] Confirm project captions/descriptions with the client. Claims to check: "for homes and commercial spaces", "every photograph taken on site, no staging", "built plumb and checked with the level", "we repair the valleys, flashings and flat sections" (lead roof), "the roof itself becomes the feature" (timber roof), and that they are happy with "Level, plumb and square" as the headline

@@ -76,6 +76,15 @@ p{margin:0}
 .stack{padding-block:clamp(1rem,3vw,2rem) clamp(3rem,7vw,5rem)}
 .stack h2{font-size:clamp(1.8rem,3.4vw,2.5rem);line-height:1.05}
 
+/* quote page questions */
+.faq{margin-top:1.2rem;max-width:44rem;border-top:2px solid var(--head)}
+.faq div{padding:1.1rem 0;border-bottom:1px solid var(--line)}
+.faq h3{font:600 1.1rem/1.4 var(--text);letter-spacing:0;color:var(--head)}
+.faq p{margin-top:.35rem}
+.faq a{color:var(--level-d);text-underline-offset:.2em}
+.foot__loc{flex-basis:100%;margin:.4rem 0 0;padding-top:1rem;border-top:1px solid var(--line)}
+.foot__loc a{color:var(--head);text-underline-offset:.2em}
+
 /* footer links */
 .foot nav{display:flex;gap:1.4rem;flex-wrap:wrap}
 .foot nav a{color:var(--body);text-decoration:none;border-bottom:1px solid var(--line)}
