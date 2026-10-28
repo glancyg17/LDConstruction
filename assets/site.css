@@ -144,7 +144,10 @@ p{margin:0}
 .services{display:grid;gap:2rem}
 .svc{list-style:none;margin:0;padding:0;border-top:2px solid var(--head)}
 .svc li{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--line);font:600 1.15rem var(--text);color:var(--head)}
-.svc a{font:500 .92rem var(--text);color:var(--level-d);text-underline-offset:.2em}
+.svc--rich li{align-items:flex-start;padding:1.1rem 0}
+.svc--rich .n{display:block;font:700 1.2rem var(--text);color:var(--head)}
+.svc--rich .d{display:block;margin-top:.2rem;font:400 .98rem/1.5 var(--text);color:var(--mute)}
+.svc a{white-space:nowrap;font:500 .92rem var(--text);color:var(--level-d);text-underline-offset:.2em}
 .note{margin-top:1.4rem;max-width:34rem;color:var(--mute);font-size:.98rem}
 
 /* contact: the only dark band */

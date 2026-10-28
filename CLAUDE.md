@@ -37,6 +37,15 @@ The header, footer and mobile call bar are repeated in each page: when you chang
 - **No** all-caps labels, eyebrow text, stock icons, gradients (except the level graphic), testimonial cards or scroll animations.
 - Sentence case, plain British English, no hype.
 
+## Voice (keep it premium)
+**The idea:** *Level, plumb and square.* Precision, shown rather than claimed. The spirit level in the hero and in many of the photos is the through-line. Every page should sound like the same quiet, certain person.
+- Name the material or the craft decision (steel, oak, slate, brick; "steel takes the load", "checked plumb"), not a quality adjective ("high-quality", "professional", "tailored").
+- Short, certain sentences. No "we pride ourselves", "passionate", "dedicated", "second to none", exclamation marks, or explaining why we are writing.
+- Captions and project text should point at what the photo actually shows.
+- One idea per heading. Headlines are statements, not labels where we can help it ("See how it is done.", "Tell us what you are planning.").
+- Call to action stays plain and consistent: "Get a quote", "Call", "Message on WhatsApp".
+- Premium comes from restraint. If a line does not add something visible or true, cut it.
+
 ## Copy rules
 - **No testimonials or star ratings** until real Google reviews exist. Never write or fake one.
 - **No promises** the client hasn't agreed (response times, "free quotes", guarantees, years in business, "fully insured") until confirmed in writing by the client.
@@ -68,7 +77,7 @@ The header, footer and mobile call bar are repeated in each page: when you chang
 - [ ] Area covered, email address, owner name (add to contact + JSON-LD `areaServed`)
 - [ ] Confirm 07311 822986 is on WhatsApp
 - [ ] Quote page has no form (no email address yet). If an email is supplied, consider adding a FormSubmit form
-- [ ] Confirm project captions/descriptions with the client
+- [ ] Confirm project captions/descriptions with the client. Claims to check: "for homes and commercial spaces", "every photograph taken on site, no staging", "built plumb and checked with the level", "we repair the valleys, flashings and flat sections" (lead roof), "the roof itself becomes the feature" (timber roof), and that they are happy with "Level, plumb and square" as the headline
 - [ ] Photos for bathrooms, windows, doors, glazing, PVC, gutters; finished "after" shots for jobs shown mid-build
 - [ ] Google Business Profile; then real Google reviews for the site
 - [ ] Add site to Cloudflare Web Analytics (paste beacon where marked in `<head>`) and Search Console
